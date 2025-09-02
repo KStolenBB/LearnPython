@@ -30,3 +30,29 @@ friends = [("Rolf Smith", 26), ("Bob Johnson", 30), ("Charlie Brown", 22)]
 friend_ages = dict(friends)
 print(friend_ages)
 
+###
+
+friends = [("Rolf", 25), ("Sam", 30), ("Alex", 28)]
+
+for friend in friends:
+    name = friend[0]
+    age = friend[1]
+    print(f"Hello, {name}! You are {age} years old.")    
+
+for friend in friends:
+    name, age = friend
+    print(f"Hello, {name}! You are {age} years old.")    
+
+for name, age in friends:    
+    print(f"Hello, {name}! You are {age} years old.")
+    
+
+####
+
+cars = {"ok", "ok", "ok", "ok", "faulty", "ok", "ok"}
+
+for car in cars:
+    if car == "faulty":
+        print("Found a faulty car!")
+        break
+    print(f" is {}")
