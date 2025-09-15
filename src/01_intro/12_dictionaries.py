@@ -55,4 +55,4 @@ for car in cars:
     if car == "faulty":
         print("Found a faulty car!")
         break
-    print(f" is {}")
+    print(f" is {car}")

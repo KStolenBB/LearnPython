@@ -32,19 +32,27 @@ def find_movie():
     else:
         print(f"No movie found with the title '{search_title}'.")
 
+user_options = {
+    "a": add_movie,
+    "l": list_movies,
+    "f": find_movie
+}
 
 def menu():    
     selection = input(MENU_PROMPT)
     while selection != 'q':
-        if selection == "a":
-            add_movie()
-        elif selection == "l":
-            list_movies()
-        elif selection == "f":
-            find_movie()
+        if selection in user_options:
+            user_options[selection]()
+            
+        # if selection == "a":
+        #     add_movie()
+        # elif selection == "l":
+        #     list_movies()
+        # elif selection == "f":
+        #     find_movie()
         else:
             print('Unknown command. Please try again.')
-
+ 
         selection = input(MENU_PROMPT)
 
 menu()
