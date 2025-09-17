@@ -1,3 +1,0 @@
-
-print(my_variable)
-
